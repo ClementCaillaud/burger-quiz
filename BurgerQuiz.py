@@ -5,12 +5,13 @@ Created on Wed Aug  7 18:47:38 2019
 @author: Clément
 """
 
-from SceneLoader import SceneLoader
+from Interface import Interface
 
 def main():
-    print("Bienvenue dans Burger Quiz")
-    sceneLoader = SceneLoader()
-    sceneLoader.load_scene("accueil")
+    print("Bienvenue dans Burger Quiz")  
+    interface = Interface()
+    interface.display_image("accueil")
+    interface.start()
 
 if __name__ == "__main__":
     main()   

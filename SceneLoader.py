@@ -10,18 +10,15 @@ from Scene import Scene
 class SceneLoader:
     
     def __init__(self):
-        self.scenesList = [
-            Scene("accueil", ""),
-            Scene("nuggets", ""),
-            Scene("sel ou poivre", ""),
-            Scene("menus", ""),
-            Scene("addition", ""),
-            Scene("burger de la mort", "")]
+        self.scenesList = {
+                "accueil"       : Scene("Accueil", "data/test.gif"),
+                "nuggets"       : Scene("Nuggets", "data/test2.gif"),
+                "sel_poivre"    : Scene("Sel ou poivre", ""),
+                "menus"         : Scene("Menus", ""),
+                "addition"      : Scene("Addition", ""),
+                "burger_mort"   : Scene("Le burger de la mort", "")}
     
     def load_scene(self, name):
         print("Charger la scène {}" . format(name))
-        for i, scene in enumerate(self.scenesList):
-            if scene.get_nom() == name:
-                print("Affichage de la scène {}" . format(scene.get_nom()))
-                return
-        print("Aucune scène ne correspond")
+        scene = self.scenesList[name]
+        return scene
