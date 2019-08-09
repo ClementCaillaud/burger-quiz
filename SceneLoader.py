@@ -11,7 +11,7 @@ class SceneLoader:
     
     def __init__(self):
         self.scenesList = {
-                "score"         : Scene("Score", "data/ketchup.png"),
+                "score"         : Scene("Score", "data/ketchupmayo.png"),
                 "nuggets"       : Scene("Nuggets", "data/nuggets.png"),
                 "sel_poivre"    : Scene("Sel ou poivre", "data/seloupoivre.png"),
                 "menus"         : Scene("Menus", "data/menus.png"),

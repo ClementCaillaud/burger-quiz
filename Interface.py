@@ -14,12 +14,14 @@ class Interface():
     def __init__(self):
         self.sceneLoader = SceneLoader()
         self.currentPath = ""
+        self.started = False
         
         #Création de la fenêtre
         self.window = Tk()
-        #Création du conteneur principal
+        #Création du conteneur racine
         self.root = Canvas(self.window, bg="black", highlightthickness=0)
         self.root.pack(fill=BOTH, expand=1)
+        #Création du conteneur principal
         self.canvas = Canvas(self.root, bg="black", highlightthickness=0)
         self.canvas.pack(fill=BOTH, padx=10, pady=50, expand=1)
         self.canvas.bind("<Configure>", self.resize)
@@ -27,6 +29,7 @@ class Interface():
         self.window.bind("<Key>", self.key_pressed)
     
     def start(self):
+        self.started = True
         self.window.mainloop()
     
     def display_image(self, name):
@@ -59,11 +62,14 @@ class Interface():
         refWidth = self.canvas.winfo_width() if event == "" else event.width
         refHeight = self.canvas.winfo_height() if event == "" else event.height
         #Si on a une image à redimensionner on le fait
-        if self.currentPath != "":
+        if self.currentPath != ""  and self.started:
             #Récupération de l'image
             img = Image.open(self.currentPath)
+            #Calcul de la hauteur avec le ratio de l'image
+            ratio = img.size[1] / img.size[0]
+            height = refWidth * ratio if refWidth * ratio <= refHeight else refHeight
             #Redimensionnement
-            img = img.resize((refWidth, refHeight), Image.ANTIALIAS)
+            img = img.resize((refWidth, int(height)), Image.ANTIALIAS)
             #Modification du background du conteneur
             self.background = ImageTk.PhotoImage(img)
             self.canvas.itemconfig(self.canvas_img, image=self.background)
