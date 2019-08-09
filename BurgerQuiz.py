@@ -10,7 +10,7 @@ from Interface import Interface
 def main():
     print("Bienvenue dans Burger Quiz")  
     interface = Interface()
-    interface.display_image("accueil")
+    interface.display_image("score")
     interface.start()
 
 if __name__ == "__main__":

@@ -11,12 +11,12 @@ class SceneLoader:
     
     def __init__(self):
         self.scenesList = {
-                "accueil"       : Scene("Accueil", "data/test.gif"),
-                "nuggets"       : Scene("Nuggets", "data/test2.gif"),
-                "sel_poivre"    : Scene("Sel ou poivre", ""),
-                "menus"         : Scene("Menus", ""),
-                "addition"      : Scene("Addition", ""),
-                "burger_mort"   : Scene("Le burger de la mort", "")}
+                "score"         : Scene("Score", "data/ketchup.png"),
+                "nuggets"       : Scene("Nuggets", "data/nuggets.png"),
+                "sel_poivre"    : Scene("Sel ou poivre", "data/seloupoivre.png"),
+                "menus"         : Scene("Menus", "data/menus.png"),
+                "addition"      : Scene("Addition", "data/addition.png"),
+                "burger_mort"   : Scene("Le burger de la mort", "data/burger.png")}
     
     def load_scene(self, name):
         print("Charger la scène {}" . format(name))
