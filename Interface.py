@@ -18,8 +18,10 @@ class Interface():
         #Création de la fenêtre
         self.window = Tk()
         #Création du conteneur principal
-        self.canvas = Canvas(self.window)
-        self.canvas.pack(fill=BOTH, expand=1)
+        self.root = Canvas(self.window, bg="black", highlightthickness=0)
+        self.root.pack(fill=BOTH, expand=1)
+        self.canvas = Canvas(self.root, bg="black", highlightthickness=0)
+        self.canvas.pack(fill=BOTH, padx=10, pady=50, expand=1)
         self.canvas.bind("<Configure>", self.resize)
         #Ecoute des événements clavier
         self.window.bind("<Key>", self.key_pressed)
