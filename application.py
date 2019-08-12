@@ -29,8 +29,9 @@ class Application():
         self.canvas.pack(fill="both", padx=10, pady=10, expand=1)
         self.canvas.bind("<Configure>", self.resize)
         #Création des labels score
-        self.labelScoreKetchup = Label(self.root, text="{} MIAMS".format(self.teamKetchup.get_score()), bg="black", fg="red", font=("Horseshoes and Lemonade", 20))
-        self.labelScoreMayo = Label(self.root, text="{} MIAMS".format(self.teamMayo.get_score()), bg="black", fg="yellow", font=("Horseshoes and Lemonade", 20))
+        self.fontSize = 50
+        self.labelScoreKetchup = Label(self.root, text="{} MIAMS".format(self.teamKetchup.get_score()), bg="black", fg="red", font=("Horseshoes and Lemonade", self.fontSize))
+        self.labelScoreMayo = Label(self.root, text="{} MIAMS".format(self.teamMayo.get_score()), bg="black", fg="yellow", font=("Horseshoes and Lemonade", self.fontSize))
         self.labelScoreKetchup.pack(side="left", expand=1, pady=40)
         self.labelScoreMayo.pack(side="right", expand=1, pady=40)
         #Ecoute des événements clavier
@@ -42,7 +43,7 @@ class Application():
     
     def display_image(self, name):
         #Récupération chemin image
-        self.currentImage = self.sceneLoader.load_scene(name).get_path()
+        self.currentImage = self.sceneLoader.load_scene(name).get_image()
         #Ajout du background
         self.background = ImageTk.PhotoImage(Image.open(self.currentImage))
         self.canvas_img = self.canvas.create_image(0, 0, anchor="nw", image=self.background)
