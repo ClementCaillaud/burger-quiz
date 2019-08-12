@@ -5,7 +5,7 @@ Created on Wed Aug  7 19:07:56 2019
 @author: Clément
 """
 
-from Scene import Scene
+from scene import Scene
 
 class SceneLoader:
     
