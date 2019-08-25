@@ -12,65 +12,101 @@ namespace BurgerQuiz
 {
 	public partial class Form1 : Form
 	{
-		private Dictionary<string, string> listeImages;
+		private Dictionary<string, string> listeImages, listeVideos;
 		private Equipe equipeKetchup, equipeMayo;
 
 		public Form1()
 		{
-			init_liste_images();
-			equipeKetchup = new Equipe("ketchup");
-			equipeMayo = new Equipe("mayo");
+			//Initialisation de la liste des images
+			listeImages = new Dictionary<string, string>()
+			{
+				{"ketchup",             "Images/ketchup.png"},
+				{"mayo",                "Images/mayo.png"},
+				{"nuggets",             "Images/nuggets.png"},
+				{"sel_ou_poivre",       "Images/seloupoivre.png"},
+				{"menus",               "Images/menus.png"},
+				{"addition",            "Images/addition.png"},
+				{"burger_de_la_mort",   "Images/burger.png"}
+			};
+			//Initialisation de la liste des vidéos
+			listeVideos = new Dictionary<string, string>()
+			{
+				{"generique",           "Videos/generique"},
+				{"nuggets",             "Videos/nuggets"},
+				{"sel_ou_poivre",       "Videos/seloupoivre"},
+				{"menus",               "Videos/menus"},
+				{"addition",            "Videos/addition"},
+				{"burger_de_la_mort",   "Videos/burger"}
+			};
+			//Création des équipes
+			equipeKetchup = new Equipe();
+			equipeMayo = new Equipe();
+			//Initialisation de l'affichage
 			InitializeComponent();
-			afficher_score();
-		}
-
-		/// <summary>
-		/// Initialise les liens vers les différentes images
-		/// </summary>
-		private void init_liste_images()
-		{
-			listeImages = new Dictionary<string, string>();
-			listeImages.Add("ketchup", "Images/ketchup.png");
-			listeImages.Add("mayo", "Images/mayo.png");
-			listeImages.Add("nuggets", "Images/nuggets.png");
-			listeImages.Add("sel_ou_poivre", "Images/seloupoivre.png");
-			listeImages.Add("menus", "Images/menus.png");
-			listeImages.Add("addition", "Images/addition.png");
-			listeImages.Add("burger_de_la_mort", "Images/burger.png");
+			//Affichage du score comme premier écran
+			Afficher_score();
 		}
 
 		/// <summary>
 		/// Affiche une image de transition
 		/// </summary>
 		/// <param name="key">Nom de l'image à charger</param>
-		private void afficher_image(string key)
+		private void Afficher_image(string key)
 		{
+			//Stopper la vidéo (pas sûr que ce soit nécessaire mais on sait jamais)
+			VideoPlayer.Ctlcontrols.stop();
+			//Récupération de l'image voulue
 			Image img = Image.FromFile(listeImages[key]);
 			pictureBoxScene.Image = img;
+			//Cacher et afficher les bons conteneurs
 			tableLayoutPanelScore.Visible = false;
+			VideoPlayer.Visible = false;
 			pictureBoxScene.Visible = true;
 		}
 
 		/// <summary>
 		/// Affiche le score de chaque équipe
 		/// </summary>
-		private void afficher_score()
+		private void Afficher_score()
 		{
+			//Stopper la vidéo (pas sûr que ce soit nécessaire mais on sait jamais)
+			VideoPlayer.Ctlcontrols.stop();
+			//Récupération des 2 images ketchup et mayo
 			Image imgKetchup = Image.FromFile(listeImages["ketchup"]);
 			Image imgMayo = Image.FromFile(listeImages["mayo"]);
 			pictureBoxKetchup.Image = imgKetchup;
 			pictureBoxMayo.Image = imgMayo;
+			//Cacher et afficher les bons conteneurs
+			VideoPlayer.Visible = false;
 			pictureBoxScene.Visible = false;
 			tableLayoutPanelScore.Visible = true;
 		}
 
 		/// <summary>
+		/// Affiche une vidéo de transition
+		/// </summary>
+		/// <param name="key">Nom de la vidéo à charger</param>
+		private void Afficher_video(string key)
+		{
+			//Stopper la vidéo (pas sûr que ce soit nécessaire mais on sait jamais)
+			VideoPlayer.Ctlcontrols.play();
+			//Attribution de l'URL de la vidéo
+			VideoPlayer.URL = listeVideos[key];
+			//Cacher et afficher les bons conteneurs
+			pictureBoxScene.Visible = false;
+			tableLayoutPanelScore.Visible = false;
+			VideoPlayer.Visible = true;
+			//Démarrer la lecture
+			VideoPlayer.Ctlcontrols.play();
+		}
+
+		/// <summary>
 		/// Met à jour l'affichage du score des deux équipes
 		/// </summary>
-		private void maj_label_score()
+		private void Maj_label_score()
 		{
-			labelKetchup.Text = equipeKetchup.get_score() + " MIAMS";
-			labelMayo.Text = equipeMayo.get_score() + " MIAMS";
+			labelKetchup.Text = equipeKetchup.Score + " MIAMS";
+			labelMayo.Text = equipeMayo.Score + " MIAMS";
 		}
 
 		/// <summary>
@@ -78,43 +114,43 @@ namespace BurgerQuiz
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void evenement_clavier(object sender, PreviewKeyDownEventArgs e)
+		private void Evenement_clavier(object sender, PreviewKeyDownEventArgs e)
 		{
 			switch (e.KeyCode)
 			{
 				case Keys.Space:
-					afficher_score();
+					Afficher_score();
 					break;
 				case Keys.N:
-					afficher_image("nuggets");
+					Afficher_image("nuggets");
 					break;
 				case Keys.S:
-					afficher_image("sel_ou_poivre");
+					Afficher_image("sel_ou_poivre");
 					break;
 				case Keys.M:
-					afficher_image("menus");
+					Afficher_image("menus");
 					break;
 				case Keys.A:
-					afficher_image("addition");
+					Afficher_image("addition");
 					break;
 				case Keys.B:
-					afficher_image("burger_de_la_mort");
+					Afficher_image("burger_de_la_mort");
 					break;
 				case Keys.Up:
-					equipeKetchup.ajouter_score(1);
-					maj_label_score();
+					equipeKetchup.Score += 1;
+					Maj_label_score();
 					break;
 				case Keys.Down:
-					equipeKetchup.ajouter_score(-1);
-					maj_label_score();
+					equipeKetchup.Score -= 1;
+					Maj_label_score();
 					break;
 				case Keys.Right:
-					equipeMayo.ajouter_score(1);
-					maj_label_score();
+					equipeMayo.Score += 1;
+					Maj_label_score();
 					break;
 				case Keys.Left:
-					equipeMayo.ajouter_score(-1);
-					maj_label_score();
+					equipeMayo.Score -= 1;
+					Maj_label_score();
 					break;
 			}
 		}

@@ -28,8 +28,10 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.pictureBoxScene = new System.Windows.Forms.PictureBox();
 			this.panelScene = new System.Windows.Forms.Panel();
+			this.VideoPlayer = new AxWMPLib.AxWindowsMediaPlayer();
 			this.tableLayoutPanelScore = new System.Windows.Forms.TableLayoutPanel();
 			this.pictureBoxMayo = new System.Windows.Forms.PictureBox();
 			this.pictureBoxKetchup = new System.Windows.Forms.PictureBox();
@@ -37,6 +39,7 @@
 			this.labelMayo = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxScene)).BeginInit();
 			this.panelScene.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.VideoPlayer)).BeginInit();
 			this.tableLayoutPanelScore.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxMayo)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxKetchup)).BeginInit();
@@ -47,7 +50,7 @@
 			this.pictureBoxScene.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pictureBoxScene.Location = new System.Drawing.Point(0, 0);
 			this.pictureBoxScene.Name = "pictureBoxScene";
-			this.pictureBoxScene.Size = new System.Drawing.Size(671, 440);
+			this.pictureBoxScene.Size = new System.Drawing.Size(817, 543);
 			this.pictureBoxScene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBoxScene.TabIndex = 0;
 			this.pictureBoxScene.TabStop = false;
@@ -56,13 +59,25 @@
 			// panelScene
 			// 
 			this.panelScene.BackColor = System.Drawing.SystemColors.WindowText;
+			this.panelScene.Controls.Add(this.VideoPlayer);
 			this.panelScene.Controls.Add(this.tableLayoutPanelScore);
 			this.panelScene.Controls.Add(this.pictureBoxScene);
 			this.panelScene.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelScene.Location = new System.Drawing.Point(0, 0);
 			this.panelScene.Name = "panelScene";
-			this.panelScene.Size = new System.Drawing.Size(671, 440);
+			this.panelScene.Size = new System.Drawing.Size(817, 543);
 			this.panelScene.TabIndex = 2;
+			// 
+			// VideoPlayer
+			// 
+			this.VideoPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.VideoPlayer.Enabled = true;
+			this.VideoPlayer.Location = new System.Drawing.Point(0, 0);
+			this.VideoPlayer.Name = "VideoPlayer";
+			this.VideoPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("VideoPlayer.OcxState")));
+			this.VideoPlayer.Size = new System.Drawing.Size(817, 543);
+			this.VideoPlayer.TabIndex = 2;
+			this.VideoPlayer.Visible = false;
 			// 
 			// tableLayoutPanelScore
 			// 
@@ -79,15 +94,15 @@
 			this.tableLayoutPanelScore.RowCount = 2;
 			this.tableLayoutPanelScore.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
 			this.tableLayoutPanelScore.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-			this.tableLayoutPanelScore.Size = new System.Drawing.Size(671, 440);
+			this.tableLayoutPanelScore.Size = new System.Drawing.Size(817, 543);
 			this.tableLayoutPanelScore.TabIndex = 1;
 			// 
 			// pictureBoxMayo
 			// 
 			this.pictureBoxMayo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBoxMayo.Location = new System.Drawing.Point(338, 3);
+			this.pictureBoxMayo.Location = new System.Drawing.Point(411, 3);
 			this.pictureBoxMayo.Name = "pictureBoxMayo";
-			this.pictureBoxMayo.Size = new System.Drawing.Size(330, 302);
+			this.pictureBoxMayo.Size = new System.Drawing.Size(403, 374);
 			this.pictureBoxMayo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBoxMayo.TabIndex = 0;
 			this.pictureBoxMayo.TabStop = false;
@@ -97,7 +112,7 @@
 			this.pictureBoxKetchup.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pictureBoxKetchup.Location = new System.Drawing.Point(3, 3);
 			this.pictureBoxKetchup.Name = "pictureBoxKetchup";
-			this.pictureBoxKetchup.Size = new System.Drawing.Size(329, 302);
+			this.pictureBoxKetchup.Size = new System.Drawing.Size(402, 374);
 			this.pictureBoxKetchup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBoxKetchup.TabIndex = 1;
 			this.pictureBoxKetchup.TabStop = false;
@@ -106,11 +121,11 @@
 			// 
 			this.labelKetchup.AutoSize = true;
 			this.labelKetchup.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.labelKetchup.Font = new System.Drawing.Font("Horseshoes and Lemonade", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelKetchup.Font = new System.Drawing.Font("Horseshoes and Lemonade", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelKetchup.ForeColor = System.Drawing.Color.Red;
-			this.labelKetchup.Location = new System.Drawing.Point(3, 308);
+			this.labelKetchup.Location = new System.Drawing.Point(3, 380);
 			this.labelKetchup.Name = "labelKetchup";
-			this.labelKetchup.Size = new System.Drawing.Size(329, 132);
+			this.labelKetchup.Size = new System.Drawing.Size(402, 163);
 			this.labelKetchup.TabIndex = 2;
 			this.labelKetchup.Text = "0 MIAMS";
 			this.labelKetchup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,11 +134,11 @@
 			// 
 			this.labelMayo.AutoSize = true;
 			this.labelMayo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.labelMayo.Font = new System.Drawing.Font("Horseshoes and Lemonade", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelMayo.Font = new System.Drawing.Font("Horseshoes and Lemonade", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelMayo.ForeColor = System.Drawing.Color.Gold;
-			this.labelMayo.Location = new System.Drawing.Point(338, 308);
+			this.labelMayo.Location = new System.Drawing.Point(411, 380);
 			this.labelMayo.Name = "labelMayo";
-			this.labelMayo.Size = new System.Drawing.Size(330, 132);
+			this.labelMayo.Size = new System.Drawing.Size(403, 163);
 			this.labelMayo.TabIndex = 3;
 			this.labelMayo.Text = "0 MIAMS";
 			this.labelMayo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,15 +148,16 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.WindowText;
-			this.ClientSize = new System.Drawing.Size(671, 440);
+			this.ClientSize = new System.Drawing.Size(817, 543);
 			this.Controls.Add(this.panelScene);
 			this.Font = new System.Drawing.Font("Horseshoes and Lemonade", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ForeColor = System.Drawing.Color.White;
 			this.Name = "Form1";
 			this.Text = "Burger Quiz";
-			this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.evenement_clavier);
+			this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Evenement_clavier);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxScene)).EndInit();
 			this.panelScene.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.VideoPlayer)).EndInit();
 			this.tableLayoutPanelScore.ResumeLayout(false);
 			this.tableLayoutPanelScore.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxMayo)).EndInit();
@@ -158,6 +174,7 @@
 		private System.Windows.Forms.PictureBox pictureBoxKetchup;
 		private System.Windows.Forms.Label labelKetchup;
 		private System.Windows.Forms.Label labelMayo;
+		private AxWMPLib.AxWindowsMediaPlayer VideoPlayer;
 	}
 }
 

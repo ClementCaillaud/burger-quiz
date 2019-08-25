@@ -8,23 +8,11 @@ namespace BurgerQuiz
 {
 	class Equipe
 	{
-		private string nom;
-		private int score;
+		public int Score { get; set; }
 
-		public Equipe(string nom)
+		public Equipe()
 		{
-			this.nom = nom;
-			this.score = 0;
-		}
-
-		public void ajouter_score(int valeur)
-		{
-			score += valeur;
-		}
-
-		public int get_score()
-		{
-			return score;
+			Score = 0;
 		}
 	}
 }
