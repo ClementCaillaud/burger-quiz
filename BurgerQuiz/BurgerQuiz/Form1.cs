@@ -14,9 +14,12 @@ namespace BurgerQuiz
 	{
 		private Dictionary<string, string> listeImages, listeVideos;
 		private Equipe equipeKetchup, equipeMayo;
+		private bool modeVideo;
 
 		public Form1()
 		{
+			//Mode d'affichage des transitions
+			modeVideo = false;
 			//Initialisation de la liste des images
 			listeImages = new Dictionary<string, string>()
 			{
@@ -145,19 +148,60 @@ namespace BurgerQuiz
 					Afficher_score();
 					break;
 				case Keys.N:
-					Afficher_image("nuggets");
+					if(modeVideo)
+					{
+						Afficher_video("nuggets");
+					}
+					else
+					{
+						Afficher_image("nuggets");
+					}
 					break;
 				case Keys.S:
-					Afficher_image("sel_ou_poivre");
+					if (modeVideo)
+					{
+						Afficher_video("sel_ou_poivre");
+					}
+					else
+					{
+						Afficher_image("sel_ou_poivre");
+					}
 					break;
 				case Keys.M:
-					Afficher_image("menus");
+					if(modeVideo)
+					{
+						Afficher_video("menus");
+					}
+					else
+					{
+						Afficher_image("menus");
+					}
 					break;
 				case Keys.A:
-					Afficher_image("addition");
+					if (modeVideo)
+					{
+						Afficher_video("addition");
+					}
+					else
+					{
+						Afficher_image("addition");
+					}
 					break;
 				case Keys.B:
-					Afficher_image("burger_de_la_mort");
+					if (modeVideo)
+					{
+						Afficher_video("burger_de_la_mort");
+					}
+					else
+					{
+						Afficher_image("burger_de_la_mort");
+					}
+					break;
+				case Keys.G:
+					if(modeVideo)
+					{
+						Afficher_video("generique");
+					}
 					break;
 				case Keys.Up:
 					equipeKetchup.Score += 1;
