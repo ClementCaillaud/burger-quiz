@@ -129,6 +129,7 @@
 			this.labelKetchup.TabIndex = 2;
 			this.labelKetchup.Text = "0 MIAMS";
 			this.labelKetchup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.labelKetchup.Resize += new System.EventHandler(this.RedimensionnementLabel);
 			// 
 			// labelMayo
 			// 
@@ -154,6 +155,7 @@
 			this.ForeColor = System.Drawing.Color.White;
 			this.Name = "Form1";
 			this.Text = "Burger Quiz";
+			this.Load += new System.EventHandler(this.RedimensionnementLabel);
 			this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Evenement_clavier);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxScene)).EndInit();
 			this.panelScene.ResumeLayout(false);

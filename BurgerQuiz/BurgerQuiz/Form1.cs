@@ -101,12 +101,35 @@ namespace BurgerQuiz
 		}
 
 		/// <summary>
+		/// Mise à jour de la taille de la police du score, en fonction de la taille de la fenêtre
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void RedimensionnementLabel(object sender, EventArgs e)
+		{
+			float taillePolice = labelKetchup.Width / labelKetchup.Height + 50;
+			labelKetchup.Font = new System.Drawing.Font(labelKetchup.Font.Name, taillePolice);
+			labelMayo.Font = new System.Drawing.Font(labelMayo.Font.Name, taillePolice);
+		}
+
+		/// <summary>
 		/// Met à jour l'affichage du score des deux équipes
 		/// </summary>
 		private void Maj_label_score()
 		{
 			labelKetchup.Text = equipeKetchup.Score + " MIAMS";
 			labelMayo.Text = equipeMayo.Score + " MIAMS";
+		}
+
+		/// <summary>
+		/// Ajuste manuellement la taille de la police en incrémentant ou décrémentant
+		/// </summary>
+		/// <param name="valeur"></param>
+		private void Ajuster_police_manuellement(int valeur)
+		{
+			float taillePolice = (labelKetchup.Font.Size + valeur) > 1 ? labelKetchup.Font.Size + valeur : 1;
+			labelKetchup.Font = new System.Drawing.Font(labelKetchup.Font.Name, taillePolice);
+			labelMayo.Font = new System.Drawing.Font(labelMayo.Font.Name, taillePolice);
 		}
 
 		/// <summary>
@@ -151,6 +174,12 @@ namespace BurgerQuiz
 				case Keys.Left:
 					equipeMayo.Score -= 1;
 					Maj_label_score();
+					break;
+				case Keys.Add:
+					Ajuster_police_manuellement(10);
+					break;
+				case Keys.Subtract:
+					Ajuster_police_manuellement(-10);
 					break;
 			}
 		}
