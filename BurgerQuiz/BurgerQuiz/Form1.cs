@@ -135,6 +135,18 @@ namespace BurgerQuiz
 			labelMayo.Font = new System.Drawing.Font(labelMayo.Font.Name, taillePolice);
 		}
 
+		private void Afficher(string nom)
+		{
+			if(modeVideo)
+			{
+				Afficher_video(nom);
+			}
+			else
+			{
+				Afficher_image(nom);
+			}
+		}
+
 		/// <summary>
 		/// Gestion des événements clavier
 		/// </summary>
@@ -148,54 +160,19 @@ namespace BurgerQuiz
 					Afficher_score();
 					break;
 				case Keys.N:
-					if(modeVideo)
-					{
-						Afficher_video("nuggets");
-					}
-					else
-					{
-						Afficher_image("nuggets");
-					}
+					Afficher("nuggets");
 					break;
 				case Keys.S:
-					if (modeVideo)
-					{
-						Afficher_video("sel_ou_poivre");
-					}
-					else
-					{
-						Afficher_image("sel_ou_poivre");
-					}
+					Afficher("sel_ou_poivre");
 					break;
 				case Keys.M:
-					if(modeVideo)
-					{
-						Afficher_video("menus");
-					}
-					else
-					{
-						Afficher_image("menus");
-					}
+					Afficher("menus");
 					break;
 				case Keys.A:
-					if (modeVideo)
-					{
-						Afficher_video("addition");
-					}
-					else
-					{
-						Afficher_image("addition");
-					}
+					Afficher("addition");
 					break;
 				case Keys.B:
-					if (modeVideo)
-					{
-						Afficher_video("burger_de_la_mort");
-					}
-					else
-					{
-						Afficher_image("burger_de_la_mort");
-					}
+					Afficher("burger_de_la_mort");
 					break;
 				case Keys.G:
 					if(modeVideo)
