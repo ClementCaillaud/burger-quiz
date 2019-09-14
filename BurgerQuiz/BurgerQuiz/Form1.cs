@@ -12,35 +12,13 @@ namespace BurgerQuiz
 {
 	public partial class Form1 : Form
 	{
-		private Dictionary<string, string> listeImages, listeVideos;
 		private Equipe equipeKetchup, equipeMayo;
-		private bool modeVideo;
+		private IniFile configFile;
 
 		public Form1()
 		{
-			//Mode d'affichage des transitions
-			modeVideo = false;
-			//Initialisation de la liste des images
-			listeImages = new Dictionary<string, string>()
-			{
-				{"ketchup",             "Images/ketchup.png"},
-				{"mayo",                "Images/mayo.png"},
-				{"nuggets",             "Images/nuggets.png"},
-				{"sel_ou_poivre",       "Images/seloupoivre.png"},
-				{"menus",               "Images/menus.png"},
-				{"addition",            "Images/addition.png"},
-				{"burger_de_la_mort",   "Images/burger.png"}
-			};
-			//Initialisation de la liste des vidéos
-			listeVideos = new Dictionary<string, string>()
-			{
-				{"generique",           "Videos/generique"},
-				{"nuggets",             "Videos/nuggets"},
-				{"sel_ou_poivre",       "Videos/seloupoivre"},
-				{"menus",               "Videos/menus"},
-				{"addition",            "Videos/addition"},
-				{"burger_de_la_mort",   "Videos/burger"}
-			};
+			//Récupération du fichier de configuration
+			configFile = new IniFile("config.ini");
 			//Création des équipes
 			equipeKetchup = new Equipe();
 			equipeMayo = new Equipe();
@@ -59,7 +37,7 @@ namespace BurgerQuiz
 			//Stopper la vidéo (pas sûr que ce soit nécessaire mais on sait jamais)
 			VideoPlayer.Ctlcontrols.stop();
 			//Récupération de l'image voulue
-			Image img = Image.FromFile(listeImages[key]);
+			Image img = Image.FromFile(configFile.GetValue("PATH_IMAGE", key));
 			pictureBoxScene.Image = img;
 			//Cacher et afficher les bons conteneurs
 			tableLayoutPanelScore.Visible = false;
@@ -75,8 +53,8 @@ namespace BurgerQuiz
 			//Stopper la vidéo (pas sûr que ce soit nécessaire mais on sait jamais)
 			VideoPlayer.Ctlcontrols.stop();
 			//Récupération des 2 images ketchup et mayo
-			Image imgKetchup = Image.FromFile(listeImages["ketchup"]);
-			Image imgMayo = Image.FromFile(listeImages["mayo"]);
+			Image imgKetchup = Image.FromFile(configFile.GetValue("PATH_IMAGE", "ketchup"));
+			Image imgMayo = Image.FromFile(configFile.GetValue("PATH_IMAGE", "mayo"));
 			pictureBoxKetchup.Image = imgKetchup;
 			pictureBoxMayo.Image = imgMayo;
 			//Cacher et afficher les bons conteneurs
@@ -94,7 +72,7 @@ namespace BurgerQuiz
 			//Stopper la vidéo (pas sûr que ce soit nécessaire mais on sait jamais)
 			VideoPlayer.Ctlcontrols.play();
 			//Attribution de l'URL de la vidéo
-			VideoPlayer.URL = listeVideos[key];
+			VideoPlayer.URL = configFile.GetValue("PATH_VIDEO", key);
 			//Cacher et afficher les bons conteneurs
 			pictureBoxScene.Visible = false;
 			tableLayoutPanelScore.Visible = false;
@@ -135,9 +113,13 @@ namespace BurgerQuiz
 			labelMayo.Font = new System.Drawing.Font(labelMayo.Font.Name, taillePolice);
 		}
 
+		/// <summary>
+		/// Affiche une scène en mode vidéo ou image en fonction du mode de lecture paramétré
+		/// </summary>
+		/// <param name="nom"></param>
 		private void Afficher(string nom)
 		{
-			if(modeVideo)
+			if(configFile.GetValue("PARAM", "modeVideo") == "1")
 			{
 				Afficher_video(nom);
 			}
@@ -175,7 +157,7 @@ namespace BurgerQuiz
 					Afficher("burger_de_la_mort");
 					break;
 				case Keys.G:
-					if(modeVideo)
+					if(configFile.GetValue("PARAM", "modeVideo") == "1")
 					{
 						Afficher_video("generique");
 					}
