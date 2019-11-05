@@ -19,7 +19,7 @@ Ou recherchez l'application
 |Flèche haut|+1 pt pour l'équipe Ketchup|
 |Flèche bas|-1 pt pour l'équipe Ketchup|
 |Flèche droite|+1 pt pour l'équipe Mayo|
-|Flèche gauche|-1 pt pour l'équipe Ketchup|
+|Flèche gauche|-1 pt pour l'équipe Mayo|
 |||
 |N|Lancer la transition Nuggets|
 |S|Lancer la transition Sel ou poivre|
