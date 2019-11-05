@@ -3,11 +3,14 @@ Application reprenant le célèbre jeu Burger Quiz présenté par l'excellent Al
 
 ## Installation
 A la racine du projet, rendez-vous dans le dossier **BurgerQuiz/Publish/**
+
 Exécutez **setup.exe** pour démarrer l'installation du programme et de ses dépendances (*notamment .net*)
+
 Une icone **BurgerQuiz.exe** devrait être créée sur le bureau
 
 ## Lancement
 Double-cliquez sur l'icône **BurgerQuiz.exe** présente sur le bureau
+
 Ou recherchez l'application
 
 ## Utilisation
