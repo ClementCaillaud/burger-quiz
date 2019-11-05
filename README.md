@@ -2,7 +2,7 @@
 Application reprenant le célèbre jeu Burger Quiz présenté par l'excellent Alain Chabat
 
 ## Installation
-A la racine du projet, rendez-vous dans le dossier **BurgerQuiz/Publish/**
+A la racine du projet, rendez-vous dans le dossier **BurgerQuiz/Setup/**
 
 Exécutez **setup.exe** pour démarrer l'installation du programme et de ses dépendances (*notamment .net*)
 

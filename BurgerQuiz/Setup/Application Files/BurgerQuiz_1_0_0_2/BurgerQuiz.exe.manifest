@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="BurgerQuiz.exe" version="1.0.0.2" publicKeyToken="baeee8b78d01a86c" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="BurgerQuiz" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="BurgerQuiz.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.WMPLib.dll" size="53760">
+      <assemblyIdentity name="AxInterop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iG3cGSiBwrSfVWTxVNV8zDiD4vVF3FeYwzKAEHmwl9k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BurgerQuiz.exe" size="78248">
+      <assemblyIdentity name="BurgerQuiz" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>hC0zOTRRXH7XLB3F+O60sQ86QJypZBQBMAN5E9nYcSk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.WMPLib.dll" size="330752">
+      <assemblyIdentity name="Interop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>rat6PJV2Cgkf9ZYYmSnaGCBQOFaVvbTSwVR9zAta8Ps=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="BurgerQuiz.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="favicon.ico" size="1150">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zM874TMxfU3kR/yDV0uSIWXZbALz4ekhlxnlsaqaTk8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Score\Images\ketchup.png" size="19965">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gwblPpx1RXcSHXe1clahpZiHUq7SaMTRwc6cnP0MdQU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Score\Images\mayo.png" size="15773">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c6u202COF3qqti6QOit+eMlfwFjMoB0F6V5dRrmf300=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Images\addition.png" size="31335">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ryb57sbjfllR+yLlJFfVO/1BplCSE8dEVra9UlyUIU0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Images\burger.png" size="47454">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>V6ie2T9lb2u2qMeVW4t5WBBi5yz2upRK5JVFmpPxIjE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Images\menus.png" size="78394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HndqKmZg2KNkO9jiGaylugJxQ6FSo6DRZiyrk5shBRQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Images\nuggets.png" size="36456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9FhzUDh3EitWu9KSEedCI+8OV+q5c1vR3kyFupFhHIo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Images\seloupoivre.png" size="60874">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2NBSoRns+qrktOCe/4nWO0BIUpI/GznnNy9f+rfZ2lc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Videos\addition-transition.mp4" size="275624">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>umU8Pwwov2F0Eu6YG2ogFymZ1HeEhvsznS1TzyfELu8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Videos\death-burger-transition.mp4" size="633409">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qOrBAWGE9Vo2QlHrdZ/BNzatpyypitEQDqPl6uoXwIs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Videos\menus-transition.mp4" size="188387">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rwXargFDYf8Dps7sF732iXV50/qEAldmrvGzgru1Fgg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Videos\nuggets-transition.mp4" size="415814">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>r3O/65v2d6KLHxMXuH6JczZZvy/JXYt2DMiCtywVNzY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Transition\Videos\selt-pepper-transition.mp4" size="413690">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lQF9gcJV6rm9piEpHGt5/WkwDlqqRFVoWYnSE078N+k=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=CDM\CAILLACL" issuerKeyHash="84de2ea40400b008f9537a87cdbbc46459ea7fdb" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>UNbIjmkNVCo4YbOrGKnMhtl5nHOVGVaCXp7h8uFS2lE=</DigestValue></Reference></SignedInfo><SignatureValue>dC8Neu0hIltWfvZpt0b3NGLODENhNzb27ixbvLuDErGqgmIRHbYTlEulNAVrQYyv7Y02xbM0ztuzfILuON1z3VSKXzUQJukG7emfbwu5cH2TR9Anzs1OQQ+9CnYjUlGY4IuQuDozUijI7FokU0JCQ923KxTEigMUIYAeAO0Y2Z0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pdupv3yGn7Vzx9V1pL9nU6CBn/R8ad8sXewR8ouaRo98vqF+8b7P5KIt/NfuVBHqgEfod376tCPVXQdY8OJ7avmT9qu9YrV4L+uoVqiImquqQ2ifkt4FxPRJbayyKfhujk/9A1euS5avBzE2KiqRUq8EHOI20dteuwgBU75d8Vs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="51da52e1f2e19e5e82561995739c79d986cca918abb361382a540d698ec8d650" Description="" Url=""><as:assemblyIdentity name="BurgerQuiz.exe" version="1.0.0.2" publicKeyToken="baeee8b78d01a86c" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CDM\CAILLACL</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>jIDO5e9LgwuI007bCwpC+eRg2hxpa2spGpFJP84non4=</DigestValue></Reference></SignedInfo><SignatureValue>ja9STSf/fVQG1IHkNRe3Q9jIyvjz4dHL3LoNRaCSRYv41afEU/F7ACgQhUzJ2O5o3O98nhSbq9bdEaYJoyxrk/lXFommIxCiAN12kOeii6D2OVDinO2cDN9ViTXhxTsoYbxNGfpaTP6y5DVyZeNGPT9erMWQLsZDyxXyLUdCvOk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pdupv3yGn7Vzx9V1pL9nU6CBn/R8ad8sXewR8ouaRo98vqF+8b7P5KIt/NfuVBHqgEfod376tCPVXQdY8OJ7avmT9qu9YrV4L+uoVqiImquqQ2ifkt4FxPRJbayyKfhujk/9A1euS5avBzE2KiqRUq8EHOI20dteuwgBU75d8Vs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQYPAKcFo27J9DYxQnq8ev2jANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgAQwBEAE0AXABDAEEASQBMAEwAQQBDAEwwHhcNMTkxMDMwMTAzODQ0WhcNMjAxMDI5MTYzODQ0WjAjMSEwHwYDVQQDHhgAQwBEAE0AXABDAEEASQBMAEwAQQBDAEwwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKXbqb98hp+1c8fVdaS/Z1OggZ/0fGnfLF3sEfKLmkaPfL6hfvG+z+SiLfzX7lQR6oBH6Hd++rQj1V0HWPDie2r5k/arvWK1eC/rqFaoiJqrqkNon5LeBcT0SW2ssin4bo5P/QNXrkuWrwcxNioqkVKvBBziNtHbXrsIAVO+XfFbAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAXHfyhUlCmN5k2vY/flF3Pmnl794YlZHuTbBUvh0Xd6Q2/JpSNtC1/vqtSfKZa2sDMunCB474kcHVAcvmJrtT1vf3ousxP9BnB/rcHU/P8L3ZX6zbr5J0kOHU7JFSBkHRQCC1hypGy4vqm+ufo1fUZi/pxqJzJedHnWK0tUBEfdo=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
