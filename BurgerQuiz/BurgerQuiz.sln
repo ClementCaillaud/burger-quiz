@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.779
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerQuiz", "BurgerQuiz\BurgerQuiz.csproj", "{869D1F43-AB84-4205-927C-65163B9F48AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BurgerQuiz", "BurgerQuiz\BurgerQuiz.csproj", "{34324891-B5B0-4238-AEAC-E87A90FDDACF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{869D1F43-AB84-4205-927C-65163B9F48AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{869D1F43-AB84-4205-927C-65163B9F48AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{869D1F43-AB84-4205-927C-65163B9F48AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{869D1F43-AB84-4205-927C-65163B9F48AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34324891-B5B0-4238-AEAC-E87A90FDDACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34324891-B5B0-4238-AEAC-E87A90FDDACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34324891-B5B0-4238-AEAC-E87A90FDDACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34324891-B5B0-4238-AEAC-E87A90FDDACF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {ECB8F1B5-F0BF-4884-A087-A421E190EF2E}
 	EndGlobalSection
 EndGlobal

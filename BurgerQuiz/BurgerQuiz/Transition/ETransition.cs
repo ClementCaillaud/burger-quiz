@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace BurgerQuiz
 {
-	class Equipe
-	{
-		public int Score { get; set; }
-
-		public Equipe()
-		{
-			Score = 0;
-		}
-	}
+    public enum ETransition
+    {
+        NUGGETS,
+        SEL_OU_POIVRE,
+        MENUS,
+        ADDITION,
+        BURGER_DE_LA_MORT
+    }
 }
