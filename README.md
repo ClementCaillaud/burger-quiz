@@ -6,7 +6,7 @@ A la racine du projet, rendez-vous dans le dossier **BurgerQuiz/Publish/**
 
 Exécutez **setup.exe** pour démarrer l'installation du programme et de ses dépendances (*notamment .net*)
 
-Une icone **BurgerQuiz.exe** devrait être créée sur le bureau
+Une icône **BurgerQuiz.exe** devrait être créée sur le bureau
 
 ## Lancement
 Double-cliquez sur l'icône **BurgerQuiz.exe** présente sur le bureau
@@ -31,4 +31,4 @@ Ou recherchez l'application
 |+|Augmenter la taille de la police|
 |-|Réduire la taille de la police|
 
-> Note : Toutes ses commandes ne peuvent être exécutées que depuis la vue des scores, exceptée la touche Espace
+> Note : Toutes ces commandes ne peuvent être exécutées que depuis la vue des scores, exceptée la touche Espace
