@@ -14,7 +14,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <DoNotCopyLocalIfInGac>true</DoNotCopyLocalIfInGac>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\CAILLACL\Documents\Dev_perso\BurgerQuiz\Publish\</PublishUrl>
+    <PublishUrl>D:\Multimédia\Documents\GitHub\burger-quiz\BurgerQuiz\Setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>FB1EAA2772DF7766976ACB552E86BDE8857352C7</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>55532194C00336C0A61DAC69002148987ABBF211</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>BurgerQuiz_TemporaryKey.pfx</ManifestKeyFile>
@@ -196,7 +196,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 et x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="BurgerQuiz.exe" version="1.0.0.2" publicKeyToken="baeee8b78d01a86c" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="BurgerQuiz.exe" version="1.0.0.1" publicKeyToken="89ce4bb4f4a7f2ea" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the 
-          requestedExecutionLevel node with one of the following.
+          Options du manifeste de contrôle de compte d’utilisateur (UAC)
+          Si vous voulez changer le niveau de contrôle de compte d’utilisateur Windows, remplacez le 
+          nœud requestedExecutionLevel par l’un des nœuds suivants.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward 
-         compatibility then delete the requestedExecutionLevel node.
+         Si vous voulez utiliser la virtualisation de fichiers système et du Registre pour la 
+         compatibilité descendante, supprimez le nœud requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -50,19 +50,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iG3cGSiBwrSfVWTxVNV8zDiD4vVF3FeYwzKAEHmwl9k=</dsig:DigestValue>
+        <dsig:DigestValue>sYn6x7SDeC4bK05HAiK82ZcqMhtxixk3frqu4f8Tg7A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BurgerQuiz.exe" size="78248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BurgerQuiz.exe" size="78272">
       <assemblyIdentity name="BurgerQuiz" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hC0zOTRRXH7XLB3F+O60sQ86QJypZBQBMAN5E9nYcSk=</dsig:DigestValue>
+        <dsig:DigestValue>I6SLRdQYK3xo2s38AJ9Fg8XEFtk3EAMKbQSe4eMbVFc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rat6PJV2Cgkf9ZYYmSnaGCBQOFaVvbTSwVR9zAta8Ps=</dsig:DigestValue>
+        <dsig:DigestValue>UWRpBB0JrYgczjA9I20e6wqImkEK5lR4D3KBStXt7cI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -204,4 +204,4 @@
       <dsig:DigestValue>lQF9gcJV6rm9piEpHGt5/WkwDlqqRFVoWYnSE078N+k=</dsig:DigestValue>
     </hash>
   </file>
-<publisherIdentity name="CN=CDM\CAILLACL" issuerKeyHash="84de2ea40400b008f9537a87cdbbc46459ea7fdb" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>UNbIjmkNVCo4YbOrGKnMhtl5nHOVGVaCXp7h8uFS2lE=</DigestValue></Reference></SignedInfo><SignatureValue>dC8Neu0hIltWfvZpt0b3NGLODENhNzb27ixbvLuDErGqgmIRHbYTlEulNAVrQYyv7Y02xbM0ztuzfILuON1z3VSKXzUQJukG7emfbwu5cH2TR9Anzs1OQQ+9CnYjUlGY4IuQuDozUijI7FokU0JCQ923KxTEigMUIYAeAO0Y2Z0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pdupv3yGn7Vzx9V1pL9nU6CBn/R8ad8sXewR8ouaRo98vqF+8b7P5KIt/NfuVBHqgEfod376tCPVXQdY8OJ7avmT9qu9YrV4L+uoVqiImquqQ2ifkt4FxPRJbayyKfhujk/9A1euS5avBzE2KiqRUq8EHOI20dteuwgBU75d8Vs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="51da52e1f2e19e5e82561995739c79d986cca918abb361382a540d698ec8d650" Description="" Url=""><as:assemblyIdentity name="BurgerQuiz.exe" version="1.0.0.2" publicKeyToken="baeee8b78d01a86c" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CDM\CAILLACL</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>jIDO5e9LgwuI007bCwpC+eRg2hxpa2spGpFJP84non4=</DigestValue></Reference></SignedInfo><SignatureValue>ja9STSf/fVQG1IHkNRe3Q9jIyvjz4dHL3LoNRaCSRYv41afEU/F7ACgQhUzJ2O5o3O98nhSbq9bdEaYJoyxrk/lXFommIxCiAN12kOeii6D2OVDinO2cDN9ViTXhxTsoYbxNGfpaTP6y5DVyZeNGPT9erMWQLsZDyxXyLUdCvOk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pdupv3yGn7Vzx9V1pL9nU6CBn/R8ad8sXewR8ouaRo98vqF+8b7P5KIt/NfuVBHqgEfod376tCPVXQdY8OJ7avmT9qu9YrV4L+uoVqiImquqQ2ifkt4FxPRJbayyKfhujk/9A1euS5avBzE2KiqRUq8EHOI20dteuwgBU75d8Vs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQYPAKcFo27J9DYxQnq8ev2jANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgAQwBEAE0AXABDAEEASQBMAEwAQQBDAEwwHhcNMTkxMDMwMTAzODQ0WhcNMjAxMDI5MTYzODQ0WjAjMSEwHwYDVQQDHhgAQwBEAE0AXABDAEEASQBMAEwAQQBDAEwwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKXbqb98hp+1c8fVdaS/Z1OggZ/0fGnfLF3sEfKLmkaPfL6hfvG+z+SiLfzX7lQR6oBH6Hd++rQj1V0HWPDie2r5k/arvWK1eC/rqFaoiJqrqkNon5LeBcT0SW2ssin4bo5P/QNXrkuWrwcxNioqkVKvBBziNtHbXrsIAVO+XfFbAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAXHfyhUlCmN5k2vY/flF3Pmnl794YlZHuTbBUvh0Xd6Q2/JpSNtC1/vqtSfKZa2sDMunCB474kcHVAcvmJrtT1vf3ousxP9BnB/rcHU/P8L3ZX6zbr5J0kOHU7JFSBkHRQCC1hypGy4vqm+ufo1fUZi/pxqJzJedHnWK0tUBEfdo=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=CLEM-PC\Clément" issuerKeyHash="e10a16d48f7c9e52dad2170d64d0d184f55c0f23" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>NABsPKAbDhP8BOXQ44pGIPw9sIVFcd8Iy9ke2vH/+DA=</DigestValue></Reference></SignedInfo><SignatureValue>wMLUU8g3IaWZ9GzQ/vPW+w5r2e3UT5r6iS1He/mB5BPu5AoN52dxBZYiUTMSp8/DApN7lRssjYklX5r0ssxbX3VCyA9mui02cB586CW+TkxEaw8HKggx/XswVUBa1NlTapHmNcZ16pQh5Y7Rc4ogOHEfuWszSibPtEbBgqvbd1I=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>yJuVzVCtVEtCRl9oNjFvPcHwDLzSAxjENroDbbWhkCBsXti+bcxSZ/xuugyAG/7OFOIEvq3N4fYtknJ6l2a03tcatfk1KfjAMwVayvYRXx2ltSRQHkxB+J+5D2iFFwe9PraWczkwRl0KY/r7QxImKqqVUfQRnEMdYSNf2XCdj0k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="30f8fff1da1ed9cb08df714585b03dfc20468ae3d0e504fc130e1ba03c6c0034" Description="" Url=""><as:assemblyIdentity name="BurgerQuiz.exe" version="1.0.0.1" publicKeyToken="89ce4bb4f4a7f2ea" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CLEM-PC\Clément</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>48ichjukyqDSCAq0bu91l24akDBDHWDNFP4E9FqokHQ=</DigestValue></Reference></SignedInfo><SignatureValue>RHuVwA69SKUh6Fau7DDcjFvLBqZCaCEiujpuz8Z4KGSAPiMGuI0BXBbPV1RJhUf5XWKeDFFzfddTkiAGtI/63dOztHQ10hYnMo8CCIM6rL6qoJ1nfBd7SNHOLfEBn0xTFHsEBpzmG+/Ku90MhaKJ0SSG6G0+lp0Znrl1LAjQegc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>yJuVzVCtVEtCRl9oNjFvPcHwDLzSAxjENroDbbWhkCBsXti+bcxSZ/xuugyAG/7OFOIEvq3N4fYtknJ6l2a03tcatfk1KfjAMwVayvYRXx2ltSRQHkxB+J+5D2iFFwe9PraWczkwRl0KY/r7QxImKqqVUfQRnEMdYSNf2XCdj0k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQIlFOBa+z6ZxJfVMedcP4zjANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4AQwBMAEUATQAtAFAAQwBcAEMAbADpAG0AZQBuAHQwHhcNMTkwODIwMTk0NzUwWhcNMjAwODIwMDE0NzUwWjApMScwJQYDVQQDHh4AQwBMAEUATQAtAFAAQwBcAEMAbADpAG0AZQBuAHQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMiblc1QrVRLQkZfaDYxbz3B8Ay80gMYxDa6A221oZAgbF7Yvm3MUmf8broMgBv+zhTiBL6tzeH2LZJyepdmtN7XGrX5NSn4wDMFWsr2EV8dpbUkUB5MQfifuQ9ohRcHvT62lnM5MEZdCmP6+0MSJiqqlVH0EZxDHWEjX9lwnY9JAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAtteBShg+ihVhP+VRNkkqXawQQ+uJPilnZpicrNf8RxTQoDOTrrOxu0Gtemi5UxKtPi5XdG1Qb+5KXDJDVJdMXKoDOpdiM27J2VrAoZSoP1tNl6pVV/6RSnQPkzmWzkuUNvAUsZC57zO6Mh5J3LoKFX9/dIXJfaTr2kppSPVqy1k=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
