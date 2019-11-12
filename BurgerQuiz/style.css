@@ -1,0 +1,58 @@
+@font-face
+{
+    font-family: "Burger Quiz";
+    src: url("assets/horseshoeslemonade.ttf");
+}
+
+html
+{
+    height: 90%;
+}
+
+body
+{
+    font-family: "Burger Quiz";
+    background-color: black;
+    height: 100%;
+}
+
+#div-score, #div-transition
+{
+    height: 100%;
+    text-align: center;
+}
+
+.score-equipe
+{
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+    
+}
+
+.div-img
+{
+    display: inline-block;
+    height: 70%;
+    width: 100%;
+}
+
+.div-img img, #video-transition
+{
+    height: 100%;
+}
+
+.score p
+{
+    font-size: 10vh;
+}
+
+#equipe-ketchup .score p
+{
+    color: red;
+}
+
+#equipe-mayo .score p
+{
+    color: gold;
+}
