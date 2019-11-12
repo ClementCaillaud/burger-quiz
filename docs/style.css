@@ -1,14 +1,15 @@
+/* POLICE BURGER QUIZ */
 @font-face
 {
     font-family: "Burger Quiz";
     src: url("assets/horseshoeslemonade.ttf");
 }
 
+/* GLOBAL */
 html
 {
     height: 90%;
 }
-
 body
 {
     font-family: "Burger Quiz";
@@ -16,12 +17,14 @@ body
     height: 100%;
 }
 
+/* DIV PRINCIPAUX */
 #div-score, #div-transition
 {
     height: 100%;
     text-align: center;
 }
 
+/* DIV DE L'IMAGE ET DU SCORE DE CHAQUE EQUIPE */
 .score-equipe
 {
     display: inline-block;
@@ -30,6 +33,7 @@ body
     
 }
 
+/* DIV DE L'IMAGE DE L'EQUIPE */
 .div-img
 {
     display: inline-block;
@@ -37,21 +41,25 @@ body
     width: 100%;
 }
 
+/* IMAGES ET VIDEO */
 .div-img img, #video-transition
 {
     height: 100%;
 }
 
+/* SCORE DE CHAQUE EQUIPE */
 .score p
 {
     font-size: 10vh;
 }
 
+/* SCORE DE L'EQUIPE KETCHUP */
 #equipe-ketchup .score p
 {
     color: red;
 }
 
+/* SCORE DE L'EQUIPE MAYO */
 #equipe-mayo .score p
 {
     color: gold;
