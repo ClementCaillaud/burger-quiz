@@ -6,7 +6,7 @@
 const transitions = 
 {
     nuggets: "nuggets-transition.mp4",
-    sel_ou_poivre: "selt-pepper-transition.mp4",
+    sel_ou_poivre: "selt-pepper-transition2.mp4",
     menus: "menus-transition.mp4",
     addition: "addition-transition.mp4",
     burger_de_la_mort: "death-burger-transition.mp4"
@@ -32,8 +32,6 @@ function main()
     //Evenements clavier
     document.addEventListener("keydown", function(event)
     {
-        console.log(event);
-        
         switch(event.key)
         {
             case "n":
