@@ -1,9 +1,8 @@
-var scores = 
-{
-    ketchup: 0, 
-    mayo: 0
-};
+/******************** */
+/* VARIABLES GLOBALES */
+/******************** */
 
+//Emplacement de la vidéo de chaque transition
 const transitions = 
 {
     nuggets: "nuggets-transition.mp4",
@@ -13,11 +12,24 @@ const transitions =
     burger_de_la_mort: "death-burger-transition.mp4"
 };
 
+//Score de chaque équipe
+var scores = 
+{
+    ketchup: 0, 
+    mayo: 0
+};
+
+/***********************/
+/* PROGRAMME PRINCIPAL */
+/***********************/
+
 main();
 
 function main()
 {
     afficherScore();
+
+    //Evenements clavier
     document.addEventListener("keydown", function(event)
     {
         console.log(event);
@@ -58,12 +70,24 @@ function main()
     });
 }
 
+/***************/
+/*    SCORE    */
+/***************/
+
+/**
+ * Mise à jour du score et de l'affichage
+ * @param {string} equipe Le nom de l'équipe (ketchup ou mayo)
+ * @param {int} valeur La valeur à ajouter au score
+ */
 function majScore(equipe, valeur)
 {
     scores[equipe] += valeur;
     document.getElementById("score-" + equipe).innerText = scores[equipe] + " MIAMS";
 }
 
+/**
+ * Afficher la vue du score et cacher la transition
+ */
 function afficherScore()
 {
     stopVideo();
@@ -71,6 +95,14 @@ function afficherScore()
     document.getElementById("div-score").style.display = "block";
 }
 
+/**************/
+/* TRANSITION */
+/**************/
+
+/**
+ * Afficher la transition et cacher le score
+ * @param {string} transition Le nom de la transition
+ */
 function afficherTransition(transition)
 {   
     document.getElementById("div-score").style.display = "none";
@@ -78,6 +110,10 @@ function afficherTransition(transition)
     playVideo("assets/Videos/" + transitions[transition]);
 }
 
+/**
+ * Démarrer la lecture de la vidéo
+ * @param {string} source La source de la vidéo
+ */
 function playVideo(source)
 {
     var videoPlayer = document.getElementById("video-transition");
@@ -88,6 +124,9 @@ function playVideo(source)
     });
 }
 
+/**
+ * Arrêter la lecture de la vidéo
+ */
 function stopVideo()
 {
     var videoPlayer = document.getElementById("video-transition");
