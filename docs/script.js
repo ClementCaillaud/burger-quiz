@@ -3,8 +3,10 @@
 /******************** */
 
 //Emplacement de la vidéo de chaque transition
+const pathVideos = "assets/Videos/";
 const transitions = 
 {
+    generique: "generique.mp4",
     nuggets: "nuggets-transition.mp4",
     sel_ou_poivre: "selt-pepper-transition2.mp4",
     menus: "menus-transition.mp4",
@@ -34,6 +36,9 @@ function main()
     {
         switch(event.key)
         {
+            case "g":
+                afficherTransition("generique");
+                break;
             case "n":
                 afficherTransition("nuggets");
                 break;
@@ -105,7 +110,7 @@ function afficherTransition(transition)
 {   
     document.getElementById("div-score").style.display = "none";
     document.getElementById("div-transition").style.display = "block";
-    playVideo("assets/Videos/" + transitions[transition]);
+    playVideo(pathVideos + transitions[transition]);
 }
 
 /**
