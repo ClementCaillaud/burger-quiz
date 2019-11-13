@@ -11,6 +11,7 @@ https://clementcaillaud.github.io/burger-quiz/
 |Flèche droite|+1 pt pour l'équipe Mayo|
 |Flèche gauche|-1 pt pour l'équipe Mayo|
 |||
+|G|Lancer le générique|
 |N|Lancer la transition Nuggets|
 |S|Lancer la transition Sel ou poivre|
 |M|Lancer la transition Menus|
